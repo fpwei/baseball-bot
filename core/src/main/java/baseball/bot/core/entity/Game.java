@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Getter
 @Setter
@@ -26,5 +27,11 @@ public class Game {
     @OneToOne
     @JoinColumn(name = "home_id")
     private Team home;
+
+    private String venue;
+
+    @Column(name = "first_pitch_date")
+    private Date firstPitchDate;
+
 
 }
