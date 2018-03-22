@@ -48,7 +48,7 @@ public class GameTask {
 
                 final int month = i;
                 Document document = Jsoup.connect(SCHEDULE_URL)
-                        .data(PARAM_DATE, String.format("%d-%02d-01", year, month), PARAM_GAME_TYPE,REGULAR)
+                        .data(PARAM_DATE, String.format("%d-%02d-01", year, month), PARAM_GAME_TYPE, REGULAR)
                         .get();
 
                 Map<Integer, Element> dateMap = parseSchedule(document);
@@ -66,7 +66,7 @@ public class GameTask {
                                 game.setNum(getGameNum(e));
                                 game.setFirstPitchDate(getFirstPitchDate(e, year, month, day));
                                 game.setYear(year);
-
+                                game.setType(REGULAR);
                                 return game;
                             }).collect(Collectors.toList()));
 

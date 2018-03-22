@@ -33,5 +33,7 @@ public class Game {
     @Column(name = "first_pitch_date")
     private Date firstPitchDate;
 
+    private String type;
+
 
 }
