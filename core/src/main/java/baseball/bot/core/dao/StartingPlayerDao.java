@@ -9,4 +9,6 @@ import java.util.List;
 @Repository
 public interface StartingPlayerDao extends PagingAndSortingRepository<StartingPlayer, Integer>{
     List<StartingPlayer> getStartingPlayersByGameIdAndTeamIdOrderByNumber(int gameId, int teamId);
+
+    boolean existsByGameIdAndTeamId(int gameId, int teamId);
 }

@@ -15,6 +15,8 @@ public class Player {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
+    private int number;
+
     private String name;
 
     @OneToOne
